@@ -6,18 +6,7 @@ This repository contains my personal configuration files for various tools, appl
 
 ---
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Tools and Applications](#tools-and-applications)
-- [Customization](#customization)
-- [Contributing](#contributing)
-- [License](#license)
-
----
+ 
 
 ## Introduction
 
@@ -27,7 +16,7 @@ This repository houses my personal dotfiles, which are configuration files for v
 
  
 
----
+ 
 
 ## Installation
 
