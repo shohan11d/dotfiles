@@ -1,0 +1,35 @@
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore SSH keys and security-sensitive files
+id_rsa
+id_rsa.pub
+*.pem
+*.key
+*.crt
+*.p12
+
+# Ignore logs and history
+.bash_history
+.zsh_history
+.python_history
+
+# Ignore user-specific configurations that shouldn't be shared
+.config/google-chrome/
+.config/BraveSoftware/
+.config/discord/
+.config/Code/User/workspaceStorage/
+
+# Ignore Vim and Emacs swap files
+*.swp
+*.swo
+*~
+
+# Ignore core dumps and temporary files
+*.pid
+*.log
+*.tmp
+
+# Ignore node_modules if using JavaScript tooling in dotfiles
+node_modules/
