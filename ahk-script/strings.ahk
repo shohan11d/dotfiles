@@ -4,8 +4,6 @@
 ;--------- Hotstring ----------
 ;==============================
 :*:11d.::shohan11d@gmail.com 
-:*:97d.::shohan97d@gmail.com 
-:*:cep.::cephalonshohan@gmail.com 
 
 :*:cc.::cutecatkin
 :*:ff.::ffffff
