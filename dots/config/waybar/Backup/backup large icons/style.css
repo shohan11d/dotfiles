@@ -1,0 +1,151 @@
+* {
+  color: #E1E1E1;
+
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  /* font-family: "JetBrainsMono Nerd Font"; */
+  font-family: "Maple Mono NF";
+  font-size: 12px;
+}
+
+window#waybar {
+
+background: rgba(0, 0, 0, 0.2);
+
+    /* border-radius: 30px; */
+    color: @fg;
+}
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+}
+
+#workspaces button.empty {
+  opacity: 0.5;
+}
+
+#cpu,
+#battery,
+#custom-omarchy,
+#custom-update {
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+
+#custom-omarchy {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+#custom-chrome {
+  padding: 0 4px;
+  margin: 0 10px;
+  font-size: 22px;
+  opacity: 0.8;
+}
+
+#custom-files {
+  margin: 0 12px;
+  padding: 0 4px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+#custom-gemini {
+  margin: 0 12px;
+  padding: 0 4px;
+  font-size: 19px;
+  opacity: 0.8;
+}
+
+#custom-monitor-rotate {
+  margin: 0 12px;
+  padding: 0 4px;
+  font-size: 17px;
+  opacity: 0.8;
+}
+
+#custom-special-workspace {
+  margin: 0 12px;
+  padding: 0 4px;
+  font-size: 19px;
+  opacity: 0.8;
+}
+
+#custom-code {
+  margin: 0 12px;
+  padding: 0 4px;
+  font-size: 19px;
+}
+
+#pulseaudio {
+  margin: 0 6px;
+  min-width: 28px;
+  font-size: 12px;
+}
+
+
+#network {
+  margin-right: 2px;
+  margin-left: 6px;
+  padding: 0 4px;
+  font-size: 17px;
+}
+#custom-power {
+  margin-right: 4px;
+  margin-left: 12px;
+  font-size: 16px;
+}
+
+#tray {
+  margin-right: 16px;
+}
+
+#bluetooth {
+  margin-right: 17px;
+}
+
+#clock {
+  margin: 0 4px;
+  padding: 0 2px;
+  min-width: 94px;
+}
+
+
+#custom-expand-icon {
+  margin-right: 14px;
+}
+
+tooltip {
+  padding: 1px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-chrome:hover,
+#custom-files:hover,
+#custom-gemini:hover,
+#custom-monitor-rotate:hover,
+#custom-special-workspace:hover,
+#custom-code:hover,
+#custom-expand-icon:hover,
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#custom-power:hover {
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in;
+}

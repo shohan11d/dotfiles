@@ -1,0 +1,82 @@
+(defcfg
+  process-unmapped-keys yes
+)
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =   
+  tab  q    w    f    p   b    j    l    u    y    ;    [    ]
+  esc  a    r    s    t   g    m    n  e    i    o    '
+  lsft x    c    d    v    z   f1  k    h    ,    .    /
+  lctl lalt lmet            spc   enter        ralt 
+)
+
+;; === Base ===
+(deflayer base_layer
+  grv  1    2    3    4    5    6    7    8    9    0    -    =
+  tab  q    w    f    p   b    j    l    u    y    ;    [    ]
+  esc  @a   @r   @s   @t  g    m    @n @e   @i   @o    '
+  lsft x    c    d    v    z   z   k    h    ,    .    /
+  lctl lalt lmet            @spc  @enter       @ralt
+)
+
+;; === NUMBER LAYER ===
+(deflayer number_layer
+  grv  _    _    _    _    _    _    _    _    _    _    _    _
+  _    S-8  7    8    9       /    S-8  7    8    9    /    _    _
+  _    -   1    2    3   S-=  S-=  1  2    3    -    '
+  _    4    5    6    _    _   _   _    4    5    6    _
+  _    _    _               0     _            _
+)
+
+;; === NUMBER LAYER ===
+(deflayer number2_layer
+  grv  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _   _    S-8  7    8    9    /    _    _
+  _    @n   @e   @i   @o  _    S-=  @n @e   @i   @o   '
+  _    _    _    _    _    _   _   _    4    5    6    _
+  _    _    _               _     0            _
+)
+;; === SYMBOL LAYER ===
+(deflayer sym_layer
+  grv  1    2    3    4    5    6    7    8    9    0    -    =
+  tab  `    S-,  S-=  S-- S-\  S-6  S-[  S-]  '    S-4  S-[  S-]
+  esc  S-1  S-8  -    =   S-7  S-3  S-9 S-0  S-'  S-'  _
+  lsft S-`  S-=  [    ]    S-2 S-5 S-5  S-;  S-,  S-.  S-/
+  lctl lalt lmet            spc   S--          S--
+)
+;; === NAVIGATION LAYER ===
+(deflayer nav_layer
+  grv  _    _    _    _    _    _    _    _    _    _    _    _
+  tab  _    _    up   _   _    _    _    _    _    _    [    ]
+  esc  _    left down right _    _    @n @e   @i   @o   bspc
+  lsft _    _    _    _    _   _   _    _    _    _    _
+  lctl lalt lmet            @spc  enter        ralt
+)
+
+
+(defvar
+  tap-time      230
+  hold-time     230
+  tap-time-fast    200
+  hold-time-fast   200
+  os-timeout 300 ;; Define a variable for a 300ms timeout
+)
+
+(defalias
+  ;; Home row mods (left hand) - Tap: Character, Hold: Modifier
+  a (tap-hold $tap-time    $hold-time    a    lmet)
+  r (tap-hold $tap-time    $hold-time    r    lalt)
+  s (tap-hold $tap-time    $hold-time    s    lsft)
+  t (tap-hold $tap-time-fast $hold-time-fast t    lctl)
+
+  n (tap-hold $tap-time    $hold-time    n    rctl)
+  e (tap-hold $tap-time    $hold-time    e    rsft)
+  i (tap-hold $tap-time    $hold-time    i    ralt)
+  o (tap-hold $tap-time    $hold-time    o    rmet)
+
+  ;; layers
+  enter (tap-hold $tap-time $hold-time enter (layer-toggle number_layer))
+  spc (tap-hold $tap-time $hold-time spc (layer-toggle sym_layer))
+  ralt (tap-hold $tap-time $hold-time bspc (layer-toggle nav_layer))
+
+)
+

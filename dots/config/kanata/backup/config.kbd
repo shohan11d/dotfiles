@@ -1,0 +1,125 @@
+;; ==============================================================================
+;; ==                             CONFIGURATION                                ==
+;; ==============================================================================
+(defcfg
+  process-unmapped-keys yes
+)
+
+;; ==============================================================================
+;; ==                            KEY SOURCE MAP                              ==
+;; ==============================================================================
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    = bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]
+  caps a    s    d    f    g    h    j    k    l    ;    '
+  lsft z    x    c    v    b    n    m    ,    .    /
+  lctl lmet lalt           spc            ralt menu rctl
+)
+
+;; ==============================================================================
+;; ==                          LAYER DEFINITIONS                             ==
+;; ==============================================================================
+
+;; --- Base Typing Layer (QWERTY-modified) ---
+(deflayer base_layer
+  grv  1    2    3    4    5    6    7    8    9    0    -    = bspc
+  tab  q    w    f    @p   b    j    l    u    y    ;    [    ]
+  esc  @a   @r   @s   @t   g    m    @n   @e   @i   @o   '
+  lsft x    c    d    v    z    k    h    ,    .    /
+  lctl lmet lalt           @spc           @ralt menu @rctl
+)
+
+;; --- Navigation Layer (Arrow Keys, Backspace, Return) ---
+(deflayer nav_layer
+  grv  lrld _    _    _    _    _    _    _    _    _    _    _ _
+  tab  _    C-A-S-c ↑    C-A-S-d _    _    C-A-S-c C-A-S-d _    _    _    _
+  esc  _    ←    ↓    →    _    _    @n   @e   @i   @o   _
+  _    _    C-A-S-c C-A-x _    _    _    _    _    _    _
+  lctl lmet lalt           spc            @ralt menu rctl
+)
+
+;; --- Number Layer (Number Pad style) ---
+(deflayer number_layer
+  @grl _    _    _    _    _    _    _    _    _    _    _    _ _
+  _    _    7    8    9    _    S-8  7    8    9    /    _    _
+  _    @n   @e   @i   @o   0    _    1    2    3    0   '
+  _    _    4    5    6    _    _    4    5    6    _
+  _    _    _              _              _    _    _
+)
+
+;; --- Symbol Layer (Punctuation and shifted keys) ---
+(deflayer sym_layer
+  @grl 1    2    3    4    5    6    7    8    9    0    -    = _
+  tab  `    S-,  -    S-=  S-\  S-6  S-[  S-]  S-4  '    S-[  S-]
+  esc  S-1  S-8  -    =    S-7  S-3  S-9  S-0  ;    S-'  _
+  lsft S-`  S-=  [    ]    S-5  S-2  S-;  S-,  S-.  S-/
+  lctl lmet lalt           spc            S--  _    _
+)
+
+;; --- QWERTY Layer ---
+(deflayer qwerty
+  grv  1    2    3    4    5    6    7    8    9    0    -    = bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]
+  esc  a    s    d    f    g    h    j    k    l    ;    '
+  lsft z    x    c    v    b    n    m    ,    .    /
+  lctl lmet lalt           spc            ralt _    @cold
+)
+
+;; --- Layers Layer (For toggling/momentary layer control) ---
+(deflayer layers
+  _    _    _    lrld _    _    _    _    _    _    _    _    _ _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _    _
+)
+
+;; ==============================================================================
+;; ==                           GLOBAL VARIABLES                             ==
+;; ==============================================================================
+(defvar
+  tap-time      230
+  hold-time     230
+  tap-time-fast    200
+  hold-time-fast   200
+  os-timeout 300 ;; Define a variable for a 300ms timeout
+)
+
+;; ==============================================================================
+;; ==                         KEY ALIASES / TAP-HOLD                         ==
+;; ==============================================================================
+(defalias
+  ;; Global Layer Toggle (Grave key tap = grv, hold = layer toggle 'layers')
+  grl (tap-hold 200 200 grv (layer-toggle layers))
+
+  ;; Home row mods (left hand) - Tap: Character, Hold: Modifier
+  a (tap-hold $tap-time    $hold-time    a    lalt)
+  r (tap-hold $tap-time    $hold-time    r    lmet)
+  s (tap-hold $tap-time    $hold-time    s    lsft)
+  t (tap-hold $tap-time-fast $hold-time-fast t    lctl)
+
+  ;; Home row mods (right hand) - Tap: Character, Hold: Modifier
+  n (tap-hold $tap-time    $hold-time    n    rctl)
+  e (tap-hold $tap-time    $hold-time    e    rsft)
+  i (tap-hold $tap-time    $hold-time    i    rmet)
+  o (tap-hold $tap-time    $hold-time    o    ralt)
+
+  ;; H key: tap = h , hold = momentary layer toggle 'number_layer'
+  h (tap-hold $tap-time $hold-time h (layer-toggle number_layer))
+  ;; P key: tap = p , hold = momentary layer toggle 'number_layer'
+  p (tap-hold $tap-time $hold-time p (layer-toggle number_layer))
+
+  ;; G key: tap = g , hold = momentary layer toggle 'number_layer'
+  g (tap-hold $tap-time $hold-time g (layer-toggle number_layer)) 
+
+  ;; Space: tap = spc, hold = momentary layer toggle 'sym_layer'
+  spc (tap-hold $tap-time $hold-time spc (layer-toggle sym_layer))
+
+  ;; Right Alt: tap = ret, hold = momentary layer toggle 'nav_layer'
+  ralt (tap-hold $tap-time $hold-time bspc (layer-toggle nav_layer))
+
+  ;; Right Control: switch the base layer to 'qwerty'
+  rctl (layer-switch qwerty)
+  cold (layer-switch base_layer)
+)
+

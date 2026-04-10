@@ -1,0 +1,31 @@
+{
+    "label" : "lock",
+    "action" : "~/.config/hypr/scripts/power.sh lock",
+    "text" : "Lock",
+    "keybind" : "l"
+}
+{
+    "label" : "logout",
+    "action": "loginctl terminate-user $USER",
+
+    "text" : "Log Out",
+    "keybind" : "e"
+}
+{
+    "label" : "suspend",
+    "action": "lockscreen.sh & disown && systemctl suspend",
+    "text" : "Suspend",
+    "keybind" : "u"
+}
+{
+    "label" : "reboot",
+    "action": "systemctl reboot",
+    "text" : "Restart",
+    "keybind" : "r"
+}
+{
+    "label" : "shutdown",
+    "action": "systemctl poweroff",
+    "text" : "Power Off",
+    "keybind" : "s"
+}
