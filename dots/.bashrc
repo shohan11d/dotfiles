@@ -31,7 +31,9 @@ export EDITOR=nvim
 export PATH="/usr/lib/ccache/bin/:$PATH"
 export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:~/.local/bin/
+export PATH="$HOME/.cargo/bin:$PATH"
 
+export X1D="/run/media/shohan11d/X1"
 
 # -----------------------------------------------------
 # ALIASES
@@ -47,7 +49,6 @@ alias ll='eza -al --icons=always'
 alias lt='eza -a --tree --level=1 --icons=always'
 alias shutdown='systemctl poweroff'
 alias v='$EDITOR'
-alias vim='$EDITOR'
 alias wifi='nmtui'
 alias arch-cleanup='~/.config/ml4w/scripts/arch/cleanup.sh'
 alias updates='~/.config/ml4w/scripts/ml4w-install-system-updates'

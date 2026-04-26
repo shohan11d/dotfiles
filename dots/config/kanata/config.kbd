@@ -40,7 +40,7 @@
   grv  1    2    3    4    5    6    7    8    9    0    -    =
   tab  `    S-,  S-=  S-- S-\  S-6  S-[  S-]  '    S-4  S-[  S-]
   esc  S-1  S-8  -    =   S-7  S-3  S-9 S-0  S-'  S-'  _
-  lsft S-`  S-=  [    ]    S-2 S-5 S-5  S-;  S-,  S-.  S-/
+  lsft S-`  S-=  [    ]    S-5 S-2 S-2  S-;  S-,  S-.  S-/
   lctl lalt lmet            spc   S--          S--
 )
 ;; === NAVIGATION LAYER ===

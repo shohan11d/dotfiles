@@ -6,69 +6,72 @@
     "custom/browser",
     "custom/files",
     "custom/gemini",
-    "custom/special-workspace",
     "custom/monitor-rotate",
-    "custom/code",
+    "custom/special-workspace",
+    "custom/code"
   ],
   "modules-right": [
     "group/tray-expander",
     "clock",
     "pulseaudio",
     "network",
-    "custom/power",
+    "custom/power"
   ],
 
   "hyprland/workspaces": {
     "format": "{name}",
     "persistent-workspaces": {
-      "*": 5, // 5 workspaces by default on every monitor
-    },
+      "*": 5
+    }
   },
+
   "custom/launcher": {
-    "format": "",
-    "on-click": "vicinae toggle",
+    "format": "󰱼",
+    "on-click": "fuzzel",
     "on-click-right": "pkill waybar && waybar &",
-    "tooltip": false,
+    "tooltip": false
   },
 
   "custom/browser": {
     "interval": 0,
-    "format": "",
+    "format": "",
     "on-click": "google-chrome-stable",
-    "on-click-right": "brave-browser",
-    "tooltip": false,
+    "on-click-right": "flatpak run com.google.ChromeDev",
+
+
+    "tooltip": false
   },
 
   "custom/files": {
     "interval": 0,
-    "format": "󰉓",
+    "format": "",
     "on-click": "nautilus --new-window",
     "on-click-right": "pkill nautilus || nautilus",
-    "tooltip": false,
+    "tooltip": false
   },
 
   "custom/gemini": {
     "interval": 0,
-    "format": "󱊇",
+    "format": "",
     "on-click": "google-chrome-stable https://gemini.google.com",
     "on-click-right": "hyprctl reload",
-    "tooltip": false,
+    "tooltip": false
   },
 
   "custom/special-workspace": {
     "interval": 0,
-    "format": "󱟻",
+    "format": "󰔲",
     "on-click": "hyprctl dispatch togglespecialworkspace scratch",
     "on-click-right": "hyprctl reload",
-    "tooltip": false,
+    "tooltip": false
   },
 
   "custom/monitor-rotate": {
     "interval": 0,
-    "format": "",
-    "on-click": "hyprctl keyword monitor 'HDMI-A-2,1920x1080@120,0x0,1' && hyprctl keyword monitor 'HDMI-A-3,1920x1080@100,-1080x0,1,transform,3'",
-    "on-click-right": "hyprctl reload",
-    "tooltip": false,
+    "format": "󱌢",
+    "on-click": "$HOME/.config/hypr/conf/scripts/screen-rotate.sh",
+    "on-click-right": "$HOME/.config/hypr/conf/scripts/screen-revert.sh",
+    "tooltip": false
   },
 
   "custom/code": {
@@ -76,61 +79,56 @@
     "format": "󰨞",
     "on-click": "code",
     "on-click-right": "windsurf",
-    "tooltip": false,
+    "tooltip": false
   },
 
   "custom/expand-icon": {
     "format": "",
-    "tooltip": false,
-    "on-scroll-up": "",
-    "on-scroll-down": "",
-    "on-scroll-left": "",
-    "on-scroll-right": "",
+    "tooltip": false
   },
 
   "group/tray-expander": {
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 600,
-      "children-class": "tray-group-item",
+      "children-class": "tray-group-item"
     },
-    "modules": ["custom/expand-icon", "tray"],
+    "modules": ["custom/expand-icon", "tray"]
   },
 
   "clock": {
-    "format": "{:L%A,%I:%M}",
+    "format": "{:%I:%M}",
     "format-alt": "{:L%d-%B}",
     "tooltip": false,
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
 
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "on-click": "pavucontrol",
-
     "on-click-right": "pactl set-sink-volume @DEFAULT_SINK@ 50%",
     "tooltip-format": "Playing at {volume}%",
     "tooltip": false,
     "scroll-step": 10,
     "format-muted": "",
     "format-icons": {
-      "headphone": "",
-      "default": [""],
-    },
+      "headphone": "",
+      "default": [""]
+    }
   },
 
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
     "format-wifi": "{icon}",
-    "format-ethernet": "󰑩",
+    "format-ethernet": "󰣺",
     "format-disconnected": "󱖣",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "omarchy-launch-wifi",
+    "on-click": "omarchy-launch-wifi"
   },
 
   "custom/power": {
@@ -138,6 +136,7 @@
     "format": "",
     "tooltip": false,
     "on-click": "systemctl poweroff",
-    "on-click-right": "wlogout",
-  },
+    "on-click-right": "wlogout"
+  }
 }
+
