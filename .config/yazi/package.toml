@@ -1,0 +1,19 @@
+[[plugin.deps]]
+use = "AleMenon/exiftool"
+rev = "4c35573"
+hash = "44ef03e4d7151fa4094dd6b87a553033"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:jump-to-char"
+rev = "ac82af3"
+hash = "7a4b4237223aaa94e589d1c01a23542a"
+
+[[flavor.deps]]
+use = "marcosvnmelo/kanagawa-dragon"
+rev = "b9541e8"
+hash = "dc840cf225dbf6f0257617403ad43d8b"
+
+[[flavor.deps]]
+use = "gosxrgxx/flexoki-dark"
+rev = "25d28ce"
+hash = "8e6dd7e42a127173e4535993d3e0e393"
