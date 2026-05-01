@@ -1,5 +1,6 @@
 {
   "position": "bottom",
+
   "modules-left": ["hyprland/workspaces"],
   "modules-center": [
     "custom/launcher",
@@ -8,28 +9,28 @@
     "custom/gemini",
     "custom/monitor-rotate",
     "custom/special-workspace",
-    "custom/code"
+    "custom/code",
   ],
   "modules-right": [
     "group/tray-expander",
     "clock",
     "pulseaudio",
     "network",
-    "custom/power"
+    "custom/power",
   ],
 
   "hyprland/workspaces": {
     "format": "{name}",
     "persistent-workspaces": {
-      "*": 5
-    }
+      "*": 5,
+    },
   },
 
   "custom/launcher": {
     "format": "󰱼",
     "on-click": "fuzzel",
     "on-click-right": "pkill waybar && waybar &",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "custom/browser": {
@@ -38,8 +39,7 @@
     "on-click": "google-chrome-stable",
     "on-click-right": "google-chrome-unstable",
 
-
-    "tooltip": false
+    "tooltip": false,
   },
 
   "custom/files": {
@@ -47,7 +47,7 @@
     "format": "",
     "on-click": "nautilus --new-window",
     "on-click-right": "pkill nautilus || nautilus",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "custom/gemini": {
@@ -55,7 +55,7 @@
     "format": "",
     "on-click": "google-chrome-stable https://gemini.google.com",
     "on-click-right": "hyprctl reload",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "custom/special-workspace": {
@@ -63,7 +63,7 @@
     "format": "󰔲",
     "on-click": "hyprctl dispatch togglespecialworkspace scratch",
     "on-click-right": "hyprctl reload",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "custom/monitor-rotate": {
@@ -71,7 +71,7 @@
     "format": "󱌢",
     "on-click": "$HOME/.config/hypr/conf/scripts/screen-rotate.sh",
     "on-click-right": "$HOME/.config/hypr/conf/scripts/screen-revert.sh",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "custom/code": {
@@ -79,28 +79,28 @@
     "format": "󰨞",
     "on-click": "code",
     "on-click-right": "windsurf",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "custom/expand-icon": {
     "format": "",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "group/tray-expander": {
     "orientation": "inherit",
     "drawer": {
       "transition-duration": 600,
-      "children-class": "tray-group-item"
+      "children-class": "tray-group-item",
     },
-    "modules": ["custom/expand-icon", "tray"]
+    "modules": ["custom/expand-icon", "tray"],
   },
 
   "clock": {
     "format": "{:%I:%M}",
     "format-alt": "{:L%d-%B}",
     "tooltip": false,
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select",
   },
 
   "pulseaudio": {
@@ -112,31 +112,30 @@
     "scroll-step": 10,
     "format-muted": "",
     "format-icons": {
-      "headphone": "",
-      "default": [""]
-    }
+      "headphone": "",
+      "default": [""],
+    },
   },
 
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
     "format-wifi": "{icon}",
-    "format-ethernet": "󰣺",
+    "format-ethernet": "",
     "format-disconnected": "󱖣",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "omarchy-launch-wifi"
+    "on-click": "omarchy-launch-wifi",
   },
 
   "custom/power": {
     "interval": 0,
-    "format": "",
+    "format": " ",
     "tooltip": false,
     "on-click": "systemctl poweroff",
-    "on-click-right": "wlogout"
-  }
+    "on-click-right": "wlogout",
+  },
 }
-

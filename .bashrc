@@ -53,6 +53,8 @@ alias arch-cleanup='~/.config/ml4w/scripts/arch/cleanup.sh'
 alias updates='~/.config/ml4w/scripts/ml4w-install-system-updates'
 alias lock='hyprlock'
 alias clock='tty-clock'
+alias npx-next='npx create-next-app@latest'
+alias npx-next='npx create-next-app@latest'
 
 # -----------------------------------------------------
 # Git
@@ -116,3 +118,11 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 unset command_not_found_handle
 export PATH="$HOME/.npm-global/bin:$PATH"
+
+# opencode
+export PATH=/home/shohan11d/.opencode/bin:$PATH
+
+
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+  fastfetch
+fi  

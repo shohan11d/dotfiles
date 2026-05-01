@@ -1,0 +1,4 @@
+general {
+    col.active_border = rgba(6EDDD6ff) rgba(3ceaa8ff) 45deg
+    col.inactive_border = rgba(181615ff)
+}

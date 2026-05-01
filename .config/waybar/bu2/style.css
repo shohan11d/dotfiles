@@ -1,0 +1,165 @@
+/* Colors */
+
+/* Global Styles */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "GeistMono NF";
+  min-height: 0;
+  margin: 0;
+  color: #D3C6AA;
+}
+
+window#waybar {
+  background-color: rgba(28, 28, 28, 0.8);
+  background-color: rgba(17, 28, 24, 0.8);
+}
+
+tooltip {
+  border-radius: 12px;
+  font-size: 12px;
+  background-color: #f6f6f6;
+}
+
+tooltip label {
+  color: #202020;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 1px 0;
+}
+
+/* Workspaces */
+#workspaces {
+  padding: 0 2px;
+  margin: 5px;
+}
+
+#workspaces button {
+  padding: 0;
+  margin: 0 2px;
+  background: transparent;
+  font-size: 12px;
+  border-radius: 2px;
+  transition: all 150ms ease-in-out;
+  color: #f6f6f6;
+}
+
+#workspaces button.active {
+  min-width: 25px;
+  border-radius: 2px;
+  color: #63b9c5;
+  background-color: rgba(99, 186, 198, 0.22);
+}
+
+#workspaces button.empty {
+  border-radius: 2px;
+  opacity: 0.5;
+  color: #f6f6f6;
+}
+
+/* Center Modules (Apps) */
+#custom-launcher,
+#custom-browser,
+#custom-files,
+#custom-gemini,
+#custom-monitor-rotate,
+#custom-special-workspace,
+#custom-code {
+  padding: 3px;
+  margin: 0 12px;
+}
+
+#custom-launcher {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+#custom-browser {
+  font-size: 19px;
+  margin: 0 14px;
+}
+
+#custom-files {
+  font-size: 19px;
+  margin: 0 14px;
+}
+
+#custom-gemini {
+  font-size: 18px;
+  margin: 0 14px;
+}
+
+#custom-monitor-rotate {
+  font-size: 20px;
+}
+
+#custom-special-workspace {
+  font-size: 19px;
+}
+
+#custom-code {
+  font-size: 20px;
+  margin: 0 14px;
+}
+
+/* Right Modules */
+#clock,
+#pulseaudio,
+#network,
+#custom-power,
+#tray {
+  padding: 3px;
+  margin: 0 6px;
+  font-weight: bold;
+}
+
+#clock {
+  font-size: 12px;
+}
+
+#pulseaudio {
+  font-size: 12px;
+  transition: all 150ms ease-in-out;
+}
+
+#network {
+  font-size: 15px;
+}
+
+#custom-power {
+  font-size: 15px;
+}
+
+#tray {
+  margin: 0 10px;
+  font-size: 21px;
+}
+
+#custom-expand-icon {
+  margin-right: 14px;
+  font-size: 11px;
+}
+
+/* Utils */
+.hidden {
+  opacity: 0;
+}
+
+/* Hover Effects */
+#custom-launcher:hover,
+#custom-browser:hover,
+#custom-files:hover,
+#custom-gemini:hover,
+#custom-monitor-rotate:hover,
+#custom-special-workspace:hover,
+#custom-code:hover,
+#custom-power:hover,
+#network:hover,
+#pulseaudio:hover,
+#clock:hover,
+#custom-expand-icon:hover {
+  color: #ade6c5;
+}

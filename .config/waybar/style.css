@@ -1,40 +1,35 @@
 /* Colors */
-@define-color bg #202020;
-@define-color fg #F6F6F6;
-@define-color gray-bg #2a2a2a;
-@define-color accent #63bac6;
 
 /* Global Styles */
 * {
   border: none;
   border-radius: 0;
-  font-family: "JetBrainsMono Nerd Font";
+  font-family: "JetBrainsMono NF";
   min-height: 0;
   margin: 0;
-  color: #ecdfe5;
+  color: #EDEDED;
 }
 
 window#waybar {
-  background-color: rgba(33, 33, 33, 0.9);
-   background: #1b1b1b; 
-   /* background: #2e3440;  */
-  color: red;
+  background-color: rgba(28, 28, 28, 0.8);
+  background-color: rgba(17, 28, 24, 0.8);
+  background: rgba(30, 30, 30, 0.6);
 }
 
 tooltip {
   border-radius: 12px;
-  padding: 1px;
-  background-color: @fg;
+  font-size: 12px;
+  background-color: #f6f6f6;
 }
 
 tooltip label {
-  color: @bg;
+  color: #202020;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-  margin: 0;
+  margin: 1px 0;
 }
 
 /* Workspaces */
@@ -50,20 +45,20 @@ tooltip label {
   font-size: 12px;
   border-radius: 2px;
   transition: all 150ms ease-in-out;
-  color: @fg;
+  color: #f6f6f6;
 }
 
 #workspaces button.active {
   min-width: 25px;
   border-radius: 2px;
-  color: #63b9c5;
-  background-color: @gray-bg;
+  color: #92a3a5;
+  background-color: rgba(133, 148, 150, 0.22);
 }
 
 #workspaces button.empty {
   border-radius: 2px;
   opacity: 0.5;
-  color: @fg;
+  color: #f6f6f6;
 }
 
 /* Center Modules (Apps) */
@@ -132,7 +127,7 @@ tooltip label {
 }
 
 #network {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 #custom-power {
@@ -167,5 +162,6 @@ tooltip label {
 #pulseaudio:hover,
 #clock:hover,
 #custom-expand-icon:hover {
-  color: @accent;
+  color: #a3a5aa;
+  transition: all 50ms ease-in-out;
 }

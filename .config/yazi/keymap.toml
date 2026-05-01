@@ -373,7 +373,14 @@ keymap = [
 	{ on = "f", run = "filter", desc = "Filter help items" },
 ]
 
+
+
 [[mgr.prepend_keymap]]
 on   = "f"
 run  = "plugin jump-to-char"
 desc = "Jump to char"
+
+[[manager.prepend_keymap]]
+on   = [ "i" ]
+run = "plugin easyjump"
+desc = "easyjump"

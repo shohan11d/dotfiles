@@ -1,7 +1,6 @@
 {
   "position": "bottom",
   "modules-left": ["hyprland/workspaces"],
-
   "modules-center": [
     "custom/launcher",
     "custom/browser",
@@ -22,11 +21,11 @@
   "hyprland/workspaces": {
     "format": "{name}",
     "persistent-workspaces": {
-      "*": 5, // 5 workspaces by default on every monitor
+      "*": 5,
     },
   },
+
   "custom/launcher": {
-    "format": "",
     "format": "󰱼",
     "on-click": "fuzzel",
     "on-click-right": "pkill waybar && waybar &",
@@ -37,7 +36,8 @@
     "interval": 0,
     "format": "",
     "on-click": "google-chrome-stable",
-    "on-click-right": "brave-browser",
+    "on-click-right": "google-chrome-unstable",
+
     "tooltip": false,
   },
 
@@ -51,8 +51,6 @@
 
   "custom/gemini": {
     "interval": 0,
-    "format": "",
-    "format": "󰆼",
     "format": "",
     "on-click": "google-chrome-stable https://gemini.google.com",
     "on-click-right": "hyprctl reload",
@@ -61,8 +59,6 @@
 
   "custom/special-workspace": {
     "interval": 0,
-    "format": "󰈉",
-    "format": "󰝴",
     "format": "󰔲",
     "on-click": "hyprctl dispatch togglespecialworkspace scratch",
     "on-click-right": "hyprctl reload",
@@ -71,13 +67,9 @@
 
   "custom/monitor-rotate": {
     "interval": 0,
-    "format": "",
-    "format": "󰹑",
-    "format": "󰱺",
     "format": "󱌢",
-    // "format": "",
-    "on-click": "monitor = HDMI-A-3, 1920x1080@100, 0x0, 1",
-    "on-click-right": "hyprctl reload",
+    "on-click": "$HOME/.config/hypr/conf/scripts/screen-rotate.sh",
+    "on-click-right": "$HOME/.config/hypr/conf/scripts/screen-revert.sh",
     "tooltip": false,
   },
 
@@ -92,10 +84,6 @@
   "custom/expand-icon": {
     "format": "",
     "tooltip": false,
-    "on-scroll-up": "",
-    "on-scroll-down": "",
-    "on-scroll-left": "",
-    "on-scroll-right": "",
   },
 
   "group/tray-expander": {
@@ -117,7 +105,6 @@
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "on-click": "pavucontrol",
-
     "on-click-right": "pactl set-sink-volume @DEFAULT_SINK@ 50%",
     "tooltip-format": "Playing at {volume}%",
     "tooltip": false,
@@ -133,7 +120,7 @@
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
     "format-wifi": "{icon}",
-    "format-ethernet": "󰑩",
+    "format-ethernet": "󰈀",
     "format-disconnected": "󱖣",
     "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
