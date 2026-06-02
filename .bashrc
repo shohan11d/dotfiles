@@ -24,6 +24,10 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+alias code='exec code'
+alias surf='exec windsurf'
+alias gravity='exec antigravity'
+
 # -----------------------------------------------------
 # Exports
 # -----------------------------------------------------
@@ -33,13 +37,7 @@ export PATH=$PATH:~/.cargo/bin/
 export PATH=$PATH:~/.local/bin/
 export PATH="$HOME/.cargo/bin:$PATH"
 
-export X1D="/run/media/shohan11d/X1"
-
-# -----------------------------------------------------
-# ALIASES
-# -----------------------------------------------------
-
-# -----------------------------------------------------
+# ----------------------------------------------------
 # General
 # -----------------------------------------------------
 alias ..='cd ..'
@@ -60,17 +58,18 @@ alias npx-next='npx create-next-app@latest'
 # Git
 # -----------------------------------------------------
 alias gs="git status"
-alias ga="git add"
+alias ga="git add ."
 alias gap='ga --patch'
-alias gl='git log --graph --all --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n"'
-alias gc="git commit -m"
+# alias gl='git log --graph --all --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n"'
+alias gl='git log --oneline'
 alias gp="git push"
 alias gpl="git pull"
 
 alias gb="git branch"
 alias gi="git init"
 alias gcl="git clone"
-
+alias gcdn="git clean -dn"
+alias gcdf="git clean -df"
 
 alias gst="git stash"
 alias gsp="git stash; git pull"
@@ -105,24 +104,15 @@ alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
 
-#init starship
-eval "$(starship init bash)"
-#init zioxide
-eval "$(zoxide init bash)"
+# init fastfetch
+if [ "$TERM_PROGRAM" != "vscode" ]; then
+  fastfetch
+fi
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
+# starship init
+eval "$(starship init bash)"
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-unset command_not_found_handle
-export PATH="$HOME/.npm-global/bin:$PATH"
-
-# opencode
-export PATH=/home/shohan11d/.opencode/bin:$PATH
-
-
-if [[ "$TERM_PROGRAM" != "vscode" ]]; then
-  fastfetch
-fi  
+#init zioxide
+eval "$(zoxide init bash)"
