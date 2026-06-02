@@ -1,0 +1,186 @@
+{
+  // ui settings
+  "workbench.activityBar.compact": true,
+  "explorer.compactFolders": false,
+  "workbench.sideBar.location": "right",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "workbench.editor.empty.hint": "hidden",
+  "security.workspace.trust.banner": "never",
+  "security.workspace.trust.enabled": false,
+  "git.openRepositoryInParentFolders": "never",
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "update.mode": "manual",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  // vim settings
+  "vim.leader": "space",
+  "vim.useSystemClipboard": true,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.visualstar": true,
+  "vim.highlightedyank.enable": true,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1,
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vim.handleKeys": {
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-a>": false,
+    "<C-x>": false
+  },
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // common bindings
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["editor.action.files.save"]
+    },
+    {
+      "before": ["}"],
+      "after": ["}", "z", "z"]
+    },
+    {
+      "before": ["{"],
+      "after": ["{", "z", "z"]
+    },
+    {
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    {
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
+    },
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z"]
+    },
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z"]
+    },
+
+    {
+      "before": ["l"],
+      "after": ["<C-u>", "z", "z"]
+    },
+    {
+      "before": ["h"],
+      "after": ["<C-d>", "z", "z"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.toggleMaximizeEditorGroup"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "<leader>"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // Navigation history
+
+    // tab bindings
+    { "before": ["<c-n>"], "commands": [":bprevious"] },
+    { "before": ["<c-e>"], "commands": [":bnext"] },
+    {
+      "before": ["leader", "n"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "u"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "i"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["leader", "w"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["leader", "t"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+    {
+      "before": ["leader", "o"],
+      "commands": ["workbench.action.closeEditorsInOtherGroups"]
+    },
+    // vim common bindings
+    {
+      "before": ["s"],
+      "after": ["<leader>", "<leader>", "s"]
+    },
+    // bookmark extension bindings
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["bookmarks.toggle"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["bookmarks.list"]
+    }
+  ],
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "cpp": false
+  },
+  "[snippets]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.linkedEditing": true,
+  "workbench.iconTheme": "symbols",
+  "codeium.enableCodeLens": false,
+  "codeium.enableConfig": {
+    "*": true,
+    "properties": true,
+    "cpp": false
+  },
+  "cph-ng.languages.cppCompiler": "/usr/bin/g++",
+  "cph-ng.languages.cppCompilerArgs": "-O2 -std=c++14 -Wall -DCPH",
+  "cph-ng.sidebar.showOobe": false,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.initialHint": false,
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  "terminal.integrated.hideOnStartup": "always",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.stickyScroll.enabled": false,
+  "window.zoomLevel": 0.1,
+  "window.customMenuBarAltFocus": false,
+  "workbench.editor.showTabs": "single",
+  "editor.fontWeight": "400",
+  "window.title": "‎ ",
+  "workbench.browser.showInTitleBar": false,
+  "terminal.integrated.fontFamily": "NotoSansM Nerd Font Mono",
+  "editor.fontFamily": "NotoSansM Nerd Font",
+  "editor.fontSize": 15,
+  "files.autoSave": "afterDelay",
+  "claudeCode.preferredLocation": "panel"
+}

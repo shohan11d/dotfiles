@@ -1,0 +1,154 @@
+[
+  // open recent files/folders
+  {
+    "key": "alt+p",
+    "command": "workbench.action.openRecent"
+  },
+
+  // kill terminal instance
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+
+  // navigate forward
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.navigateForward",
+    "when": "canNavigateForward"
+  },
+  // navigate back
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // open settings changed from c-, to c-. because c-h, c-, bind to navigate back and forward
+  {
+    "key": "ctrl+.",
+    "command": "workbench.action.openSettings"
+  },
+  {
+    "key": "alt+,",
+    "command": "fileutils.newFile"
+  },
+  {
+    "key": "alt+.",
+    "command": "fileutils.newFolder"
+  },
+  {
+    "key": "alt+m",
+    "command": "fileutils.newFileAtRoot"
+  },
+  {
+    "key": "alt+/",
+    "command": "fileutils.newFolderAtRoot"
+  },
+  {
+    "key": "alt+c",
+    "command": "fileutils.duplicateFile"
+  },
+  {
+    "key": "alt+d",
+    "command": "fileutils.removeFile"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "fileutils.moveFile"
+  },
+  {
+    "key": "alt+r",
+    "command": "fileutils.renameFile"
+  },
+  {
+    "key": "ctrl+alt+c",
+    "command": "fileutils.copyFileName"
+  },
+
+  {
+    "key": "ctrl+alt+enter",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+
+  // unbind: conflict with c+p vscode command
+  {
+    "key": "ctrl+p",
+    "command": "-extension.vim_ctrl+p",
+    "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  // unbind: conflict with c+i vscode command which triggest ai code action
+  {
+    "key": "ctrl+i",
+    "command": "-extension.vim_ctrl+i",
+    "when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
+  },
+  {
+    "key": "f12",
+    "command": "cph.runTestCases"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "-codeium.openCodeiumCommand",
+    "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-codeium.openCodeiumCommand",
+    "when": "codeium.commandEnabled && editorTextFocus && !inlineSuggestionsVisible"
+  },
+  {
+    "key": "alt+n",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "alt+e",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-workbench.action.browser.newTab",
+    "when": "activeEditor == 'workbench.editor.browser'"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "-extension.vim_ctrl+t",
+    "when": "editorTextFocus && vim.active && vim.use<C-t> && !inDebugRepl"
+  }
+]
